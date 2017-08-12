@@ -24,6 +24,10 @@ public class LoginActivity extends AppCompatActivity {
         btnClickHandler();
     }
 
+   /**
+    *
+    * Always add this toolbar in every activity
+    * */
     private void setToolbar() {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
