@@ -34,6 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
+
+    //wadekar
     private void btnClickHandler() {
 
         Button btnLogin = (Button)findViewById(R.id.btnLogin);
