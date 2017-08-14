@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.evitasoft.mechanic.RegisterActivity">
 
+
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -26,6 +27,14 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars = "vertical"
+        android:scrollbarStyle="insideInset"
+        >
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,33 +43,72 @@
         android:layout_margin="20sp"
         android:orientation="vertical">
 
+
+
+
         <EditText
             android:id="@+id/etConsumerNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:text="@string/consumer_no"/>
+            android:text="@string/customer_no"/>
 
         <EditText
             android:id="@+id/etConsumerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="@string/consumer_name"/>
+            android:hint="@string/customer_name"/>
 
         <EditText
             android:id="@+id/etConsumerAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPostalAddress"
-            android:hint="@string/consumer_address"/>
+            android:hint="@string/customer_address"/>
 
         <EditText
             android:id="@+id/etConsumerContactNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
-            android:hint="@string/consumer_contact_no"/>
+            android:hint="@string/customer_contact_no"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etconsumeremaildid"
+                android:inputType="textEmailAddress"
+                android:hint="@string/customer_emailid"/>
+
+            <EditText
+                android:id="@+id/etCylinderType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/cylinder_type"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etDiscount"
+                android:inputType="text"
+                android:hint="@string/discount"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPanCard"
+                android:inputType="text"
+                android:hint="@string/pan_card"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etGstIn"
+                android:inputType="text"
+                android:hint="@string/gstin"/>
+
 
         <Button
             android:id="@+id/btnComplaintType"
@@ -75,7 +123,11 @@
             android:layout_marginTop="20dp"
             android:text="@string/register"/>
 
+
+
+
     </LinearLayout>
+    </ScrollView>
 
 
     <ProgressBar
@@ -84,5 +136,7 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:layout_centerInParent="true"/>
+
+
 
 </RelativeLayout>

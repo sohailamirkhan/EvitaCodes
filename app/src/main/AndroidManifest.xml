@@ -16,14 +16,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".LoginActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".RegisterActivity"
+        <activity
+            android:name=".RegisterActivity"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddDelivery"
+            android:label="@string/title_activity_add_delivery"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UpdateDelivery" />
+        <activity android:name=".Welcome" />
+        <activity android:name=".Report" />
+        <activity android:name=".SelectCustomer" />
+        <activity android:name=".AllCustomer"></activity>
     </application>
 
 </manifest>

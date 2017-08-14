@@ -10,31 +10,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity {
-
+public class Welcome extends AppCompatActivity {
     Typeface custom_font;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
+        setContentView(R.layout.activity_welcome);
         setToolbar();
 
         btnClickHandler();
     }
 
-   /**
-    *
-    * Always add this toolbar in every activity
-    * */
     private void setToolbar() {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         custom_font = Typeface.createFromAsset(getAssets(), "fonts/Ubuntu-M.ttf");
         TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         mTitle.setTypeface(custom_font);
-        mTitle.setText(R.string.evita_login);
+        mTitle.setText(R.string.welcome_screen);
         setSupportActionBar(toolbar);
     }
 
@@ -42,27 +37,37 @@ public class LoginActivity extends AppCompatActivity {
     //wadekar
     private void btnClickHandler() {
 
-        Button btnLogin = (Button)findViewById(R.id.btnLogin);
-        Button btnRegister = (Button)findViewById(R.id.btnRegister);
+        Button btnAddDelivery = (Button)findViewById(R.id.btnAddDelivery);
+        Button btnUpdateDelivery = (Button)findViewById(R.id.btnUpdateDelivery);
+        Button btnReport = (Button) findViewById(R.id.btnReport);
 
-        btnLogin.setTypeface(custom_font);
-        btnRegister.setTypeface(custom_font);
+        btnAddDelivery.setTypeface(custom_font);
+        btnUpdateDelivery.setTypeface(custom_font);
+        btnReport.setTypeface(custom_font);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        btnAddDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Welcome.class);
+
+                Intent intent = new Intent(getApplicationContext(), AddDelivery.class);
                 startActivity(intent);
             }
         });
 
 
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+        btnUpdateDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                Intent intent = new Intent(getApplicationContext(), UpdateDelivery.class);
                 startActivity(intent);
+            }
+        });
+
+        btnReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
